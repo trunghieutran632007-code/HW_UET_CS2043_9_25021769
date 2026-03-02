@@ -1,0 +1,41 @@
+1. Class BankAccount 
+*Định danh: Đối tượng được định danh bởi biến tham chiếu myAccount. Biến này trỏ đến vùng nhớ chứa đối tượng BankAccount vừa được tạo ra.
+
+*Trạng thái: Được thể hiện qua 3 thuộc tính:
+
+	- accountNumber: Số tài khoản (Kiểu String).
+
+	- ownerName: Tên chủ tài khoản (Kiểu String).
+
+	- balance: Số dư tài khoản (Kiểu double, giá trị khởi tạo là 0.0).
+
+*Hành vi: Được thể hiện qua 3 phương thức:
+
+	- openAccount(String accNum, String owner): Hành vi khởi tạo thông tin tài khoản
+
+	- deposit(double amount): Hành vi Nạp tiền
+
+	- withdraw(double amount): Hành vi Rút tiền
+2. Lớp SmartFan
+
+*Định danh: Có 2 đối tượng được tạo ra, tương ứng với 2 định danh:
+
+	- livingRoomFan: Biến tham chiếu đại diện cho đối tượng quạt ở phòng khách.
+
+	- bedroomFan: Biến tham chiếu đại diện cho đối tượng quạt ở phòng ngủ.
+
+*Trạng thái: Mỗi đối tượng quạt sẽ có 3 thuộc tính:
+
+	- brand: Thương hiệu quạt (Kiểu String, mặc định là "Xiaomi").
+
+	- isPowerOn: Trạng thái nguồn đang bật hay tắt (Kiểu boolean, mặc định là false).
+
+	- speedLevel: Mức tốc độ của quạt (Kiểu int, mặc định là 0).
+
+*Hành vi: Các đối tượng quạt này có thể thực hiện 3 hành vi sau:
+
+	- turnOn(): Hành vi bật quạt
+
+	- turnOff(): Hành vi tắt quạt
+
+	- setSpeed(int newSpeed): Hành vi điều chỉnh tốc độ quạt (chỉ thay đổi trạng thái speedLevel nếu quạt đang ở trạng thái bật).
