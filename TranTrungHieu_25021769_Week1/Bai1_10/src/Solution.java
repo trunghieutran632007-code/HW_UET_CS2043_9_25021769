@@ -32,7 +32,7 @@ public class Solution {
         int[] duplicateArray = {10, 10, 10};
         int[] singleElementArray = {5};
         int[] duplicateLargestArray = {10, 5, 10};
-        int[] negativeArray = {-5, -1, -10, -2};
+        int[] negativeArray = {1, Integer.MIN_VALUE};
         System.out.println(sol.secondLargest(normalArray));
         System.out.println(sol.secondLargest(duplicateArray));
         System.out.println(sol.secondLargest(singleElementArray));
