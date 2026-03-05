@@ -16,8 +16,7 @@ public class Student {
     public Student(String id, String name){
         this.id = id;
         this.name = name;
-        this.email = "null";
-        this.gpa = 0.0;
+    
     }
 
     //Constructor co day du tham so
