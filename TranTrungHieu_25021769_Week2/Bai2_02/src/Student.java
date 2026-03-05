@@ -1,4 +1,4 @@
-package TranTrungHieu_25021769_Week2.Bai2_02;
+package Bai2_02.src;
 
 public class Student {
     private String id;

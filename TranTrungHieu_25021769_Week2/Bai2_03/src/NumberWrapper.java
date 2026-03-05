@@ -1,4 +1,4 @@
-package TranTrungHieu_25021769_Week2.Bai2_03;
+package Bai2_03.src;
 
 public class NumberWrapper {
     int value;
