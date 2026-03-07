@@ -7,7 +7,7 @@ public class MyDate {
     public MyDate(int date, int month, int year){
         this.date = date;
         this.month = month;
-        this.month = month;
+        this.year = year;
     }
 
     public void setDate(int date){
