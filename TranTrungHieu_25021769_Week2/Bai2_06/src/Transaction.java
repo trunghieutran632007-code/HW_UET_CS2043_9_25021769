@@ -11,5 +11,13 @@ public class Transaction {
         this.timestamp = timestamp;
     }
 
+    public String getTransactionID() {return this.transactionId;}
+    public double getAmount() {return this.amount;}
+    public String getTimestamp() {return timestamp;}
+
+    public void displayInfo(){
+        System.out.println(this.transactionId+ " " + this.amount + " thoi gian: " + this.timestamp);
+    }
+
     
 }
