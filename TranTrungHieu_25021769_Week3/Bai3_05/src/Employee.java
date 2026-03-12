@@ -2,25 +2,13 @@ package Bai3_05.src;
 
 public abstract class Employee {
     private String name;
-    private String dob;
-    private String id;
 
-    public Employee (String name, String dob, String id) {
+    public Employee (String name) {
         this.name = name;
-        this.dob = dob;
-        this.id = id;
     }
 
     public String getName() {
         return name;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public abstract double calculateSalary();
@@ -33,8 +21,8 @@ class FullTimeEmployee extends Employee {
     private double bonus;
     private double penalty;
 
-    public FullTimeEmployee (String name, String dob, String id, double baseSalary, double bonus, double penalty) {
-        super(name, dob, id);
+    public FullTimeEmployee (String name, double baseSalary, double bonus, double penalty) {
+        super(name);
         this.baseSalary = baseSalary;
         this.bonus = bonus;
         this.penalty = penalty;
@@ -57,8 +45,8 @@ class PartTimeEmployee extends Employee {
     private double workingHours;
     private double hourlyRate;
 
-    public PartTimeEmployee(String name, String dob, String id, double workingHours,double hourlyRate ) {
-        super(name, dob, id);
+    public PartTimeEmployee(String name, double workingHours,double hourlyRate ) {
+        super(name);
         this.workingHours = workingHours;
         this.hourlyRate = hourlyRate;
     }

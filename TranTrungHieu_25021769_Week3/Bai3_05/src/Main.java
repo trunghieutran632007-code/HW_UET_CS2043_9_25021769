@@ -31,13 +31,14 @@ public class Main {
                 double hourlyRate = Double.parseDouble(numbers[1]);
                 employees[i] = new PartTimeEmployee(name, workingHours, hourlyRate);
             }
-            //In ra man hinh
-            for (Employee emp : employees) {
-            System.out.println(emp.getName() + " - " + emp.getType() + " - " + emp.calculateSalary());
-            }
-
-            scanner.close();
+            
         }
+        //In ra man hinh
+        for (Employee emp : employees) {
+            System.out.println(emp.getName() + " - " + emp.getType() + " - " + emp.calculateSalary());
+        }
+
+        scanner.close();
     }
 
 }
