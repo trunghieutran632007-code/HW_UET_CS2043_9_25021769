@@ -1,8 +1,8 @@
 package Bai3_06.src;
 
 public class Product {
-    String name;
-    double price;
+    private String name;
+    private double price;
 
     public Product(String name, double price) {
         this.name = name;
@@ -11,7 +11,7 @@ public class Product {
 }
 
 class Electronics extends Product {
-    double warrantyFees;
+    private double warrantyFees;
 
     public Electronics(String name, double price, double warrantyFees) {
         super(name, price);
