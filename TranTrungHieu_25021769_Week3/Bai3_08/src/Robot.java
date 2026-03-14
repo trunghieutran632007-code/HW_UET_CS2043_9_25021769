@@ -19,5 +19,23 @@ public abstract class Robot {
         System.out.println(modelName);
     }
 
-    public abstract void performMainTask() {}
+    public abstract void performMainTask();
+}
+
+class DroneRobot extends Robot implements Flyable, GPS {
+
+
+}
+
+class FishRobot extends Robot implements Swimmable {
+
+}
+
+class AmphibiousRobot extends Robot implements Flyable, GPS, Swimmable {
+    @Override
+    public void performMainTask() {
+        
+    
+        
+    }
 }
