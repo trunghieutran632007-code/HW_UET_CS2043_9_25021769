@@ -28,8 +28,8 @@ public abstract class Staff implements IPayable {
 }
 
 class PartTimeStaff extends Staff {
-    int workingHours;
-    double hourlyRate;
+    private int workingHours;
+    private double hourlyRate;
 
     public PartTimeStaff(String id, String name, int workingHours, double hourlyRate) {
         super(id, name);
