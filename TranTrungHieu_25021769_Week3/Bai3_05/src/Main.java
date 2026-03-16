@@ -17,9 +17,9 @@ public class Main {
             int firstQuote = line.indexOf('"');
             int lastQuote = line.lastIndexOf('"');
 
-            String type = line.substring(0, firstQuote).trim();
+            String type = line.substring(0, firstQuote).strip();
             String name = line.substring(firstQuote + 1, lastQuote);
-            String[] numbers = line.substring(lastQuote + 1).trim().split("\\s+");
+            String[] numbers = line.substring(lastQuote + 1).strip().split("\\s+");
 
             if (type.equals("F")) {
                 double baseSalary = Double.parseDouble(numbers[0]);

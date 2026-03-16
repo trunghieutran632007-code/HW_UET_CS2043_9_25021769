@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap so doi tuong can thanh toan: ");
         int n = scanner.nextInt();
         scanner.nextLine();
 
@@ -16,7 +17,8 @@ public class Main {
             String line = scanner.nextLine().trim();
             String[] parts = line.split("\\s+");
 
-            if (parts.length == 0) continue;
+            if (parts.length == 0)
+                continue;
 
             String type = parts[0];
 
@@ -39,12 +41,20 @@ public class Main {
 
         for (int i = 0; i < n; i++) {
             if (payableList[i] != null) {
-                totalPayment += payableList[i].getPaymentAmount();
+                double amount = payableList[i].getPaymentAmount();
+                totalPayment += amount;
+
+                if (payableList[i] instanceof PartTimeStaff) {
+                    PartTimeStaff pts = (PartTimeStaff) payableList[i];
+                    System.out.println("PartTimeStaff " + pts.getName() + " - Payment: " + amount);
+                } else if (payableList[i] instanceof Invoice) {
+                    Invoice inv = (Invoice) payableList[i];
+                    System.out.println("Invoice " + inv.itemName + " - Payment: " + amount);
+                }
             }
         }
 
-        
-
+        System.out.println("Total Payment = " + totalPayment);
         scanner.close();
 
     }

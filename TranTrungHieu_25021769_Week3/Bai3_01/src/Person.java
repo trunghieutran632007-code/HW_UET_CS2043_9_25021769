@@ -13,5 +13,6 @@ public class Person {
 //Sua thanh constructor co tham so
     public Person(String name) {
         this.name = name;
+        System.out.println("1. Person is created");
     }
 }

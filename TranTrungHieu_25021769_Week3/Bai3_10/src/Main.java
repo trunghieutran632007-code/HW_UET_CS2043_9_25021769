@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap so nhan vien: ");
         int n = scanner.nextInt();
         scanner.nextLine();
         ArrayList<Employee> employees = new ArrayList<>();
@@ -21,12 +22,12 @@ public class Main {
             String name = parts[1];
             double baseSalary = Double.parseDouble(parts[2]);
 
-            if (type.equals("E")) {
+            if (type.equalsIgnoreCase("E")) {
                 employees.add(new Employee(name, baseSalary));
-            } else if (type.equals("D")) {
+            } else if (type.equalsIgnoreCase("D")) {
                 int overtimeHours = Integer.parseInt(parts[3]);
                 employees.add(new Developer(name, baseSalary, overtimeHours));
-            } else if (type.equals("T")) {
+            } else if (type.equalsIgnoreCase("T")) {
                 int bugsFound = Integer.parseInt(parts[3]);
                 employees.add(new Tester(name, baseSalary, bugsFound));
             }

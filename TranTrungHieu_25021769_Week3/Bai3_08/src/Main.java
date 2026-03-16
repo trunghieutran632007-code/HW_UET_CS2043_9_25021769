@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap so robot: ");
         int n = scanner.nextInt();
         scanner.nextLine();
         Robot[] robots = new Robot[n];

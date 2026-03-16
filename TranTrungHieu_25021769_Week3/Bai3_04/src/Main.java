@@ -14,7 +14,7 @@ public class Main {
             Cat c = (Cat) a;
             c.makeSound();
         } else {
-            System.out.println("Day khong phai Cat");
+            System.out.println("Day khong phai Meo!");
         }
 
     }
