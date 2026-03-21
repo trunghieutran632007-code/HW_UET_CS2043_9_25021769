@@ -1,14 +1,10 @@
 package Bai4_03.src;
 
-public class Employee implements IWorkable {
+public abstract class Employee implements IWorkable {
     String id;
     String name;
     double baseSalary;
-
-    @Override
-    public void work() {
-
-    }
-    
-
+//Employee khong can implements void work(), co the de class con thuc hien dieu do
 }
+
+class OfficeWorker
