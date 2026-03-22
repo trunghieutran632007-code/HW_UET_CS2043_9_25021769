@@ -1,6 +1,6 @@
 package Bai4_07.src;
 
-public class Student implements Comparable<Student> {
+public class Student {
     private String id;
     private String name;
     private double gpa;
@@ -11,14 +11,20 @@ public class Student implements Comparable<Student> {
         this.gpa  = gpa;
     }
 
-    @Override
-    public int compareTo(Student other) {
-        // So sanh theo GPA tang dan
-        return Double.compare(this.gpa, other.gpa);
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getGpa() {
+        return gpa;
     }
 
     @Override
     public String toString() {
-        return name + "(" + gpa + ")";
+        return id + " " + name + " " + gpa;
     }
 }
