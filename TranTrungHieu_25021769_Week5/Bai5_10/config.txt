@@ -1,0 +1,4 @@
+username=admin
+timeout=5000
+maxConnections=20
+databaseUrl=jdbc:mysql://localhost:3306/db?useSSL=false
