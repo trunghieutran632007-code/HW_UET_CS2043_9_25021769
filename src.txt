@@ -1,0 +1,7 @@
+ Tự tạo lớp ngoại lệ để phục vụ các mục đích riêng
+• Lớp ngoại lệ mới phải kế thừa từ lớp Exception
+hoặc lớp con của lớp này
+• Có thể cung cấp hai constructor
+o constructor mặc định (không tham số)
+o constructor nhận một tham số String và truyền 
+tham số này cho phương thức khởi tạo của lớp cơ sở
