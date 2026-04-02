@@ -1,4 +1,4 @@
-package Bai6_01.src;
+package Bai6_03.src;
 class MacCheckbox implements Checkbox {
     @Override
     public void render() {

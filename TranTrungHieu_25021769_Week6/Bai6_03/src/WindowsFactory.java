@@ -1,4 +1,4 @@
-import Bai6_03.src;
+package Bai6_03.src;
 
 class WindowsFactory implements UIFactory {
     @Override
