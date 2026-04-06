@@ -36,6 +36,11 @@ public class Config implements Cloneable {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Name: " + getName() + "\n" + "Version: " + getVersion() + "\n" + "Hashcode: " + this.hashCode();
+    }
+
 
 
 }
