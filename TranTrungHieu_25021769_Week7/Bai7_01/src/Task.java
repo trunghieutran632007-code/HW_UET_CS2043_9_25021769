@@ -1,3 +1,4 @@
+package Bai7_01.src;
 public class Task implements Runnable {
     private String name;
     private long durationMs;
