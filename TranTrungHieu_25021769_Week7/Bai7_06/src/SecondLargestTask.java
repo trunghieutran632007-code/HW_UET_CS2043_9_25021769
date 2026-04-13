@@ -1,7 +1,6 @@
 package Bai7_06.src;
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.Callable;
 
 public class SecondLargestTask implements Callable<Integer> {
     private final int[] arr;
@@ -16,23 +15,23 @@ public class SecondLargestTask implements Callable<Integer> {
             throw new Exception("Mang khong du phan tu");
         }
 
-        int first = Integer.MIN_VALUE;
-        int second = Integer.MIN_VALUE;
+        // Su dung Integer de co the kiem tra null thay vi dung Integer.MIN_VALUE
+        Integer first = null;
+        Integer second = null;
 
         for (int x : arr) {
-            if (x > first) {
+            if (first == null || x > first) {
                 second = first;
                 first = x;
-            } else if (x > second && x != first) {
+            } else if ((second == null || x > second) && x != first) {
                 second = x;
             }
         }
 
-        if (second == Integer.MIN_VALUE) {
+        if (second == null) {
             throw new Exception("Khong tim thay so lon thu hai");
         }
 
         return second;
     }
-
 }

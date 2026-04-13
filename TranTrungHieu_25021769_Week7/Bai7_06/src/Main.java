@@ -23,12 +23,11 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.print("Nhap so phan tu cua mang thu " + (i + 1) + ": ");
             int m = sc.nextInt();
-            sc.nextLine();
+            
             int[] arr = new int[m];
             System.out.println("Nhap cac phan tu: ");
             for (int j = 0; j < m; j++) {
-                arr[j] = sc.nextInt();
-                sc.nextLine();
+                arr[j] = sc.nextInt(); // Khong can sc.nextLine() o day
             }
             
             Callable<Integer> task = new SecondLargestTask(arr);
@@ -46,7 +45,9 @@ public class Main {
                 totalSum += result;
             } catch (InterruptedException | ExecutionException e) {
                 // Xu ly truong hop mang khong co so lon thu hai hop le
-                System.out.println("Mang " + (i + 1) + " - Bo qua (Loi: " + e.getMessage() + ")");
+                // Su dung e.getCause().getMessage() de lay thong bao loi chinh xac nhat
+                String errorMsg = e.getCause() != null ? e.getCause().getMessage() : e.getMessage();
+                System.out.println("Mang " + (i + 1) + " - Bo qua (Loi: " + errorMsg + ")");
             }
         }
 
@@ -57,5 +58,4 @@ public class Main {
         executor.shutdown();
         sc.close();
     }
-
 }
