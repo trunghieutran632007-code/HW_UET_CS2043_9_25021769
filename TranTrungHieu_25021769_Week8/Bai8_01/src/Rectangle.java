@@ -1,3 +1,5 @@
+package Bai8_01.src;
+
 public class Rectangle extends Shape {
 
     private final double width;

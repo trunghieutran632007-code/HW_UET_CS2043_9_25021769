@@ -1,3 +1,5 @@
+package Bai8_01.src;
+
 public class Triangle extends Shape {
 
     private static final double HALF = 0.5;

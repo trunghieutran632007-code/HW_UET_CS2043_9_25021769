@@ -1,3 +1,4 @@
+package Bai8_01.src;
 //CODE SMELLS - tại sao là vấn đề
 //1. Tên biến `t`, `h`, `r`, `m`, `f` khiến người đọc khó hiểu ý nghĩa biến
 //2. Magic number 0,9: người đọc không hiểu ý nghĩa 0,9 là gì

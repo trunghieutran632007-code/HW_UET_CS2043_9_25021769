@@ -1,3 +1,5 @@
+package Bai8_01.src;
+
 public class UserProfileRenderer {
  
     public void render(User user) {

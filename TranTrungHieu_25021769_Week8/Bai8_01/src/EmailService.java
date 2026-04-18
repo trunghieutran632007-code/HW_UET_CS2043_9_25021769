@@ -1,3 +1,5 @@
+package Bai8_01.src;
+
 public class EmailService {
  
     public void sendWelcomeEmail(User user) {
