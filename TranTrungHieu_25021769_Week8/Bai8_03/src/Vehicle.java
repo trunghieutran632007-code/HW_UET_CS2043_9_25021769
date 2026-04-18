@@ -1,3 +1,5 @@
+package Bai8_03.src;
+
 abstract class Vehicle {
     protected String plate;
     protected String brand;

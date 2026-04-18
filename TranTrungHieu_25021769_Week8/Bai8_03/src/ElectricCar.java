@@ -1,3 +1,5 @@
+package Bai8_03.src;
+
 class ElectricCar extends Vehicle {
     private int batteryPercent; // Chi xe dien moi dung
 

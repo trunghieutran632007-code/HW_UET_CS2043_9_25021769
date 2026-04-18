@@ -1,3 +1,5 @@
+package Bai8_02.src;
+
 public class PayrollManager {
 
     // 1. Ap dung Replace Magic Number with Constant

@@ -1,3 +1,5 @@
+package Bai8_02.src;
+
 public class Main {
     // 4. Tao main() sinh du lieu mau va doi chieu
     public static void main(String[] args) {

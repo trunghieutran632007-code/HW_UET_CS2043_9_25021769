@@ -1,3 +1,5 @@
+package Bai8_03.src;
+
 class MotorBike extends Vehicle {
     private double fuelLevel; // Chi xe chay xang moi dung
 
