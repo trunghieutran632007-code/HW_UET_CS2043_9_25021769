@@ -1,5 +1,8 @@
 package Bai8_04.src;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ParkingCustomer {
     private final String name;
     private final List<ParkingTicket> tickets = new ArrayList<>();
