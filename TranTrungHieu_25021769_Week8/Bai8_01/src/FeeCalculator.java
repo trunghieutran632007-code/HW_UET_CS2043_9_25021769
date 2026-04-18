@@ -8,8 +8,12 @@ package Bai8_01.src;
 //2: Đặt tên hằng số cho 0,9 -> MEMBER_DISCOUNT_RATE = 0.9;
 //3: Xoá tham số thừa
 
-public class calculateFee {
+public class FeeCalculator {
     private static final double MEMBER_DISCOUNT_RATE = 0.9;
+
+    public FeeCalculator() {
+        
+    }
 
     public double calculateFee(int hours, double ratePerHour, boolean isMember) {
         double fee = hours * ratePerHour;

@@ -12,7 +12,7 @@ public class Main {
  
     // ---------- Section A ----------
     private static void demoSectionA() {
-        System.out.println("\n--- Section A: FeeCalculator ---");
+        System.out.println("\n--- Section A ---");
         FeeCalculator calc = new FeeCalculator();
  
         double feeRegular = calc.calculateFee(10, 50.0, false);
@@ -24,7 +24,7 @@ public class Main {
  
     // ---------- Section B ----------
     private static void demoSectionB() {
-        System.out.println("\n--- Section B: UserService split into SRP classes ---");
+        System.out.println("\n--- Section B ---");
         UserRepository     repo     = new UserRepository();
         EmailService       emails   = new EmailService();
         UserProfileRenderer renderer = new UserProfileRenderer();
@@ -39,7 +39,7 @@ public class Main {
  
     // ---------- Section C ----------
     private static void demoSectionC() {
-        System.out.println("\n--- Section C: Shape polymorphism ---");
+        System.out.println("\n--- Section C ---");
         Shape[] shapes = {
                 new Rectangle(4, 5),
                 new Triangle(3, 6),
@@ -53,10 +53,10 @@ public class Main {
  
     // ---------- Section D ----------
     private static void demoSectionD() {
-        System.out.println("\n--- Section D: Report with Author extracted ---");
+        System.out.println("\n--- Section D ---");
         Author author = new Author(
-                "Alice",
-                "alice@example.com",
+                "Palmer",
+                "palmer@example.com",
                 "0900000000",
                 "Hanoi"
         );
