@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7563d961-06b5-4848-a6ff-9887dc8b9f55" name="Changes" comment="" />
+    <list default="true" id="7563d961-06b5-4848-a6ff-9887dc8b9f55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bai8_09/src/GradeClassifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai8_09/src/GradeClassifierTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai8_10/src/BankAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai8_10/src/BankAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -25,6 +39,9 @@
     "accountId": "f8e33b8b-1007-44b5-96da-0e9f14e058ce"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Bai8_07/src/DiscountCalculatorTest.java" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 6
@@ -38,6 +55,9 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.BankAccountTest.executor": "Run",
+    "JUnit.DiscountCalculatorTest.executor": "Run",
+    "JUnit.GradeClassifierTest.executor": "Run",
     "JUnit.MathUtilsTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
@@ -59,7 +79,7 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BankAccountTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Bai8_01.src.Main" />
       <module name="TranTrungHieu_25021769_Week8" />
@@ -69,6 +89,51 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankAccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TranTrungHieu_25021769_Week8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bai8_10.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Bai8_10.src" />
+      <option name="MAIN_CLASS_NAME" value="Bai8_10.src.BankAccountTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscountCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TranTrungHieu_25021769_Week8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bai8_07.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Bai8_07.src" />
+      <option name="MAIN_CLASS_NAME" value="Bai8_07.src.DiscountCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GradeClassifierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TranTrungHieu_25021769_Week8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Bai8_09.src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Bai8_09.src" />
+      <option name="MAIN_CLASS_NAME" value="Bai8_09.src.GradeClassifierTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,8 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BankAccountTest" />
+        <item itemvalue="JUnit.GradeClassifierTest" />
+        <item itemvalue="JUnit.DiscountCalculatorTest" />
         <item itemvalue="JUnit.MathUtilsTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
