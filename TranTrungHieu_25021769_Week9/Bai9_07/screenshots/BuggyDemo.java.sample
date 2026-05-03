@@ -1,0 +1,8 @@
+// File mau de tao PR test: chua nhieu loi Checkstyle co y.
+// KHONG commit file nay vao branch main. Chi dung khi tao PR test theo huong dan README.
+public class BuggyDemo{
+    public static void main(String[] args){
+    int    x=10;
+    if(x>5){System.out.println("big");}
+    }
+}
