@@ -1,0 +1,50 @@
+name: Java CI with JaCoCo Coverage
+
+# Trigger: chay khi push hoac tao PR vao branch main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Checkout source code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2) Cai dat JDK 25
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'temurin'
+
+      # 3) Cache Maven dependencies (tang toc build)
+      - name: Cache Maven packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # 4) Build, test, va kiem tra coverage voi mvn verify
+      #    - mvn verify se chay: compile -> test -> jacoco:report -> jacoco:check
+      #    - Neu coverage < 80%, buoc nay FAIL => build FAIL
+      - name: Build and verify with coverage
+        run: mvn verify --batch-mode --no-transfer-progress
+
+      # 5) Upload bao cao JaCoCo lam artifact
+      #    - Luu bao cao HTML tai target/site/jacoco/
+      #    - Co the download ve xem sau khi build xong
+      - name: Upload JaCoCo coverage report
+        uses: actions/upload-artifact@v4
+        if: always()  # Upload ca khi build fail, de xem coverage bao nhieu
+        with:
+          name: jacoco-coverage-report
+          path: target/site/jacoco/
+          retention-days: 30
