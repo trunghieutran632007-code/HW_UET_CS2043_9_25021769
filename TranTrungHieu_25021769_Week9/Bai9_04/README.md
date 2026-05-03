@@ -107,3 +107,12 @@ Failed: 0
 ## Ghi chú khi đặt workflow vào repo
 
 File `.github/workflows/ci.yml` chỉ được GitHub Actions trigger nếu nó nằm ở **gốc của repository git**, không phải bên trong `Bai9_04/`. Khi tích hợp vào repo của tuần, copy file ra `<repo-root>/.github/workflows/ci.yml`. `working-directory: ./Bai9_04` trong workflow đã trỏ đúng tới thư mục bài này.
+
+## Ảnh minh chứng
+Trước khi fix:
+<img width="1470" height="956" alt="image" src="https://github.com/user-attachments/assets/006ca6cb-9554-42e1-b8de-436080fd9ed0" />
+
+Sau khi fix:
+<img width="1470" height="956" alt="image" src="https://github.com/user-attachments/assets/024eb9cb-b7d5-4bdb-b008-05e2bb6fcbae" />
+
+
