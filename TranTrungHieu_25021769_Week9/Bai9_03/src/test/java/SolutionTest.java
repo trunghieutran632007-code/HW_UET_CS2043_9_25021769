@@ -29,7 +29,7 @@ class SolutionTest {
             "10, 55",
             "20, 6765",
             "50, 12586269025",
-            "92, 7540113804746346429"   // Gia tri lon nhat van vua long
+            "92, 7540113804746346429"
     })
     @DisplayName("Standard Fibonacci values up to F(92)")
     void standardValues(long n, long expected) {
