@@ -1,0 +1,51 @@
+name: CI Bai9_06 - Maven Dependency Caching
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai9_06/**'
+      - '.github/workflows/ci-bai9-06.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai9_06/**'
+      - '.github/workflows/ci-bai9-06.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build with Maven cache
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: TranTrungHieu_25021769_Week9/Bai9_06
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25 with Maven cache
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          cache: 'maven'   # <<< DONG QUAN TRONG: bat dependency caching cho ~/.m2/repository
+
+      - name: Show Maven version
+        run: mvn -v
+
+      - name: Build & test (mvn package)
+        run: mvn -B clean package
+
+      - name: Run application
+        run: java -jar target/bai9-06-cache-demo.jar
+
+      - name: Upload JAR artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bai9-06-cache-demo-jar
+          path: TranTrungHieu_25021769_Week9/Bai9_06/target/bai9-06-cache-demo.jar
+          retention-days: 7
