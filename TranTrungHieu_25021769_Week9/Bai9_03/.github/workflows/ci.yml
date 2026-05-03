@@ -1,0 +1,41 @@
+name: CI - Build & Test
+
+# Trigger khi co push hoac pull_request len bat ky branch
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Maven build on JDK 25
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          cache: 'maven'
+
+      - name: Show Java & Maven versions
+        run: |
+          java -version
+          mvn -version
+
+      - name: Run unit tests (mvn test)
+        run: mvn -B test
+
+      - name: Package JAR (mvn package)
+        run: mvn -B -DskipTests package
+
+      - name: Upload built JAR as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fibonacci-jar
+          path: target/fibonacci-*.jar
+          if-no-files-found: error
+          retention-days: 7
