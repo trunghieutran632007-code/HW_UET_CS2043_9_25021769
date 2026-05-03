@@ -1,0 +1,55 @@
+name: CI Bai9_03 - Build & Test
+
+# Chi trigger khi co thay doi trong thu muc Bai9_03 hoac chinh file workflow nay,
+# tranh chay CI cho cac bai khac trong cung repo.
+on:
+  push:
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai9_03/**'
+      - '.github/workflows/ci-bai9-03.yml'
+  pull_request:
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai9_03/**'
+      - '.github/workflows/ci-bai9-03.yml'
+
+# Moi step `run:` mac dinh chay trong thu muc cua bai nay
+defaults:
+  run:
+    working-directory: TranTrungHieu_25021769_Week9/Bai9_03
+
+jobs:
+  build:
+    name: Maven build on JDK 25
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+          cache: 'maven'
+          cache-dependency-path: TranTrungHieu_25021769_Week9/Bai9_03/pom.xml
+
+      - name: Show Java & Maven versions
+        run: |
+          java -version
+          mvn -version
+
+      - name: Run unit tests (mvn test)
+        run: mvn -B test
+
+      - name: Package JAR (mvn package)
+        run: mvn -B -DskipTests package
+
+      # Luu y: `path` cua upload-artifact tinh tu ROOT repo, KHONG theo working-directory.
+      - name: Upload built JAR as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fibonacci-jar
+          path: TranTrungHieu_25021769_Week9/Bai9_03/target/fibonacci-*.jar
+          if-no-files-found: error
+          retention-days: 7
