@@ -1,12 +1,61 @@
-# OS
+# ==============================================================================
+# OS (System files)
+# ==============================================================================
 .DS_Store
 Thumbs.db
+*.swp
+Desktop.ini
 
-# IDE
+# ==============================================================================
+# IDE & Editors
+# ==============================================================================
 .idea/
 .vscode/
 *.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+bin/
 
-# Java build artifacts
-build/
+# ==============================================================================
+# Java & Build Artifacts (Quan trong)
+# ==============================================================================
+# Compiled class files
 *.class
+
+# Log files
+*.log
+
+# Package files (Nên chan theo goi y truoc do)
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Build directories
+target/
+build/
+out/
+
+# ==============================================================================
+# Dependency Management
+# ==============================================================================
+# Maven
+.mvn/
+# Gradle
+.gradle/
+
+# Ngoai le: Giu lai Gradle Wrapper neu du an can tu dong build
+# !gradle-wrapper.jar
+
+# ==============================================================================
+# Environment & Secrets (Bao mat)
+# ==============================================================================
+.env
+.env.local
+*.properties
+# Luu y: Chi chan cac file .properties chua thong tin nhay cam nhu database password
