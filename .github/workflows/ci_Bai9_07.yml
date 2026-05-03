@@ -1,0 +1,32 @@
+name: CI Bai9_07 - Automated Code Review
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai9_07/**'
+      - '.github/workflows/ci-bai9-07.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  checkstyle-review:
+    name: Checkstyle Review
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+
+      - name: Run Checkstyle (inline PR comments)
+        uses: dbelyaev/action-checkstyle@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          checkstyle_config: TranTrungHieu_25021769_Week9/Bai9_07/checkstyle.xml
+          workdir: TranTrungHieu_25021769_Week9/Bai9_07/src
+          level: error
+          fail_level: any
+          filter_mode: added
