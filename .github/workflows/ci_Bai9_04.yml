@@ -3,11 +3,11 @@ name: Matrix Strategy CI - Week9 Bai04
 on:
   push:
     paths:
-      - 'TranTrungHieu_25021769_Week9/Bai04/**'
+      - 'TranTrungHieu_25021769_Week9/Bai9_04/**'
       - '.github/workflows/ci_Bai9_04.yml'
   pull_request:
     paths:
-      - 'TranTrungHieu_25021769_Week9/Bai04/**'
+      - 'TranTrungHieu_25021769_Week9/Bai9_04/**'
   workflow_dispatch:    # cho phep trigger thu cong tu UI
 
 jobs:
