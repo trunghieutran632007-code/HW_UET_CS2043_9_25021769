@@ -1,0 +1,49 @@
+name: Matrix Strategy CI - Week9 Bai04
+
+on:
+  push:
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai04/**'
+      - '.github/workflows/ci_Bai9_04.yml'
+  pull_request:
+    paths:
+      - 'TranTrungHieu_25021769_Week9/Bai04/**'
+  workflow_dispatch:    # cho phep trigger thu cong tu UI
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      # fail-fast: false -> khong huy cac job khac khi mot job fail.
+      # Quan trong: ta MUON nhin thay job nao fail, job nao pass.
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '25'
+
+      - name: Verify Java
+        run: java -version
+
+      - name: Run tests via run.sh
+        working-directory: ./TranTrungHieu_25021769_Week9/Bai9_04
+        run: |
+          chmod +x ./run.sh
+          ./run.sh
