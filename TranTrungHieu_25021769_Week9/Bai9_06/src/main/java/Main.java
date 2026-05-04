@@ -15,6 +15,7 @@ import java.util.Map;
  * <p>Class nay co tinh "cham" vao moi dependency trong pom.xml de chac chan
  * rang neu Maven khong tai duoc dep tu cache, build se fail.</p>
  */
+// tôi sửa
 public class Main {
 
     private static final Logger log = LoggerFactory.getLogger(Main.class);
