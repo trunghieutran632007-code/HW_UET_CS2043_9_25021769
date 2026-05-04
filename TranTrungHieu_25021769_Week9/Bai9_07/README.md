@@ -66,4 +66,4 @@ Xem các ảnh trong `screenshots/`:
 - `02-branch-protection-rules.png` — Cấu hình BP Rules trên `main`.
 - `03-pr-passed.png` — Sau khi fix lỗi: status check xanh, nút Merge mở lại.
 
-Link PR test: _(điền URL PR thật của bạn vào đây sau khi tạo)_.
+
