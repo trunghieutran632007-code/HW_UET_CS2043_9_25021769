@@ -130,6 +130,7 @@ Cache restored from key: setup-java-Linux-Ubuntu-maven-<hash>
 
 ```
 Cache not found for input keys: setup-java-Linux-Ubuntu-maven-<hash>
+Cache saved with the key: setup-java-Linux-x64-maven-0bd478b3f52da98b550ce242232ccd4d253702b69191b213ed1d2516ea6ec51e
 ```
 
 Tiếp đó, mở step *"Build & test (mvn package)"*:
