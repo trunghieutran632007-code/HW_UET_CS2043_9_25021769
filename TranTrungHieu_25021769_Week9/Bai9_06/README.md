@@ -97,9 +97,9 @@ Trong step `mvn package`, **không còn** dòng `Downloading from central` nào
 
 | | Lần 1 (cache miss) | Lần 2 (cache hit) | Tiết kiệm |
 |---|---|---|---|
-| Step *Set up JDK*       | _<điền giây>_ | _<điền giây>_ | _<%>_ |
-| Step *mvn package*      | _<điền giây>_ | _<điền giây>_ | _<%>_ |
-| **Tổng workflow**       | _<điền giây>_ | _<điền giây>_ | _<%>_ |
+| Step *Set up JDK*       | _<4>_ | _<điền giây>_ | _<%>_ |
+| Step *mvn package*      | _<20>_ | _<điền giây>_ | _<%>_ |
+| **Tổng workflow**       | _<24>_ | _<điền giây>_ | _<%>_ |
 
 > Hiếu điền số liệu vào bảng trên sau khi chạy 2 lần workflow.
 
