@@ -1,0 +1,18 @@
+Tai 3 file JAR sau va dat trong thu muc nay (cung cap voi PUT_JARS_HERE.txt):
+
+  1. slf4j-api-2.0.16.jar
+     https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar
+
+  2. logback-core-1.5.12.jar
+     https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar
+
+  3. logback-classic-1.5.12.jar
+     https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar
+
+Hoac chay nhanh:
+  cd lib/
+  curl -O https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar
+  curl -O https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.5.12/logback-core-1.5.12.jar
+  curl -O https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.5.12/logback-classic-1.5.12.jar
+
+Sau khi tai, co the xoa file PUT_JARS_HERE.txt nay.
