@@ -97,9 +97,9 @@ Trong step `mvn package`, **không còn** dòng `Downloading from central` nào
 
 | | Lần 1 (cache miss) | Lần 2 (cache hit) | Tiết kiệm |
 |---|---|---|---|
-| Step *Set up JDK*       | _<điền giây>_ | _<điền giây>_ | _<%>_ |
-| Step *mvn package*      | _<điền giây>_ | _<điền giây>_ | _<%>_ |
-| **Tổng workflow**       | _<điền giây>_ | _<điền giây>_ | _<%>_ |
+| Step *Set up JDK*       | _<4>_ | _<điền giây>_ | _<%>_ |
+| Step *mvn package*      | _<20>_ | _<điền giây>_ | _<%>_ |
+| **Tổng workflow**       | _<24>_ | _<điền giây>_ | _<%>_ |
 
 > Hiếu điền số liệu vào bảng trên sau khi chạy 2 lần workflow.
 
@@ -107,7 +107,7 @@ Trong step `mvn package`, **không còn** dòng `Downloading from central` nào
 
 Paste URL từ tab Actions sau khi push:
 
-- **Run lần 1** (cache miss): _<paste URL>_
+- **Run lần 1** (cache miss): _<https://github.com/trunghieutran632007-code/HW_UET_CS2043_9_25021769/actions/runs/25280996205>_
 - **Run lần 2** (cache hit):  _<paste URL>_
 
 ## 7. Phân tích log — chứng minh dependency lấy từ cache
